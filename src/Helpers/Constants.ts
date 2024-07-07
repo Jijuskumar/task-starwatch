@@ -14,7 +14,7 @@ import { ReactComponent as Todo } from "../Assets/Images/Todo.svg";
 import { ReactComponent as Team } from "../Assets/Images/team.svg";
 import { ReactComponent as Calendar } from "../Assets/Images/calendar.svg";
 import { ReactComponent as Pricing } from "../Assets/Images/pricing.svg";
-
+import { CaroselItemBO } from "../BOs/CaroselItemBO";
 
 export const MenuItems: MenuItemBO[] = [
   {
@@ -88,11 +88,30 @@ export const MenuItems: MenuItemBO[] = [
     navigateTo: "settings",
   },
 
-
-
   {
     icon: Logout,
     name: "Logout",
     navigateTo: "logout",
+  },
+];
+
+export const CaroselData: CaroselItemBO[] = [
+  {
+    id: "123456",
+    date: "September 12-22",
+    label: "Designer Dresses - Pick from trendy Designer Dress.",
+    description: "Enjoy free home delivery in this summer",
+  },
+  {
+    id: "123457",
+    date: "August 12-22",
+    label: "Designer Dresses - Pick from trendy Designer Dress.",
+    description: "Enjoy free home delivery in this Independance",
+  },
+  {
+    id: "123458",
+    date: "November 12-22",
+    label: "Designer Dresses - Pick from trendy Designer Dress.",
+    description: "Enjoy free home delivery in this Christmas",
   },
 ];

@@ -23,6 +23,7 @@
     flex-direction: row;
     align-items: center;
     padding: 15px 10px;
+    cursor: pointer;
 }
 
 .shrinked {
@@ -35,6 +36,7 @@
     flex-direction: row;
     align-items: center;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .icon-wrapper {
@@ -79,6 +81,7 @@
     display: flex;
     flex: 1;
     width: 100%;
+    overflow: auto;
 }
 
 .profile-container {
@@ -108,3 +111,12 @@
     border-color: white;
 }
 
+@media (max-width: 677px) {
+    .sidenav {
+        width: 70px;
+    } 
+
+    .menu-text {
+        display: none;
+    }
+}
