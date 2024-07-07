@@ -16,7 +16,7 @@ interface FrameComponentProps {
 }
 
 const FrameComponent: FC<FrameComponentProps> = (props) => {
-  const [visible, setVisible] = useState<boolean>(false);
+  const [visible, setVisible] = useState<boolean>(true);
 
   const sideNavRef = useRef<HTMLDivElement>(null);
 
@@ -39,13 +39,13 @@ const FrameComponent: FC<FrameComponentProps> = (props) => {
   return (
     <div className="App">
       <div className="container">
-        <div ref={sideNavRef} className="sidenav">
+        <div ref={sideNavRef} className="sidenav shrinked">
           <div className="menu-header" onClick={onClickMenu}>
             <div className="icon-wrapper">
               <img src={Menu} alt="" style={{ height: 24, width: 24 }} />
             </div>
             {!visible && (
-              <img src={DashStack} alt="" style={{ marginLeft: 10 }} />
+              <img className="menu-text" src={DashStack} alt="" style={{ marginLeft: 10 }} />
             )}
           </div>
           <div style={{ flex: 1, overflow: "auto" }}>
@@ -76,7 +76,7 @@ const FrameComponent: FC<FrameComponentProps> = (props) => {
                     />
                   </div>
                   {!visible && (
-                    <p style={{ marginLeft: 15, overflow: "hidden" }}>
+                    <p className="menu-text" style={{ marginLeft: 15, overflow: "hidden" }}>
                       {item.name}
                     </p>
                   )}
@@ -116,7 +116,7 @@ const FrameComponent: FC<FrameComponentProps> = (props) => {
                   }}
                 >
                   <p style={{ fontSize: 14 }}>Moni Roy</p>
-                  <p style={{ fontSize: 12 }}>Admin</p>
+                  <p style={{ fontSize: 12 , color: "#565656"}}>Admin</p>
                 </div>
                 <img src={More} alt="" style={{ width: 18, height: 18 }} />
               </div>
