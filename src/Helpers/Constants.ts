@@ -22,8 +22,14 @@ import { ReactComponent as Sent } from "../Assets/Images/Messages/send.svg";
 import { ReactComponent as Starred } from "../Assets/Images/Messages/rating-star.svg";
 import { ReactComponent as MailInbox } from "../Assets/Images/Messages/email-action-unread-non-active.svg";
 import { ReactComponent as MailInboxActive } from "../Assets/Images/Messages/email-action-unread.svg";
+import { ReactComponent as User } from "../Assets/Images/DashBoard/User.svg";
+import { ReactComponent as Order } from "../Assets/Images/DashBoard/Order.svg";
+import { ReactComponent as Sales } from "../Assets/Images/DashBoard/Revenue.svg";
+import { ReactComponent as Pending } from "../Assets/Images/DashBoard/Pending.svg";
 import { CaroselItemBO } from "../BOs/CaroselItemBO";
 import { EmailOptionBO } from "../BOs/EmailOptionBO";
+import { DashBoardCardBO } from "../BOs/DashBoardCardBO";
+import { ProductListBO } from "../BOs/ProductListBO";
 
 export const PER_PAGE = 12;
 
@@ -162,5 +168,97 @@ export const EmailOptions: EmailOptionBO[] = [
     name: "Bin",
     icon: Bin,
     activeIcon: MailInboxActive,
+  },
+];
+
+export const DashBoardCardData: DashBoardCardBO[] = [
+  {
+    label: "Total User",
+    count: "46,860",
+    sensex: true,
+    profit: "8.5%",
+    description: "Up from yesterday",
+    icon: User,
+  },
+  {
+    label: "Total Order",
+    count: "10293",
+    sensex: true,
+    profit: "1.3%",
+    description: "Up from past week",
+    icon: Order,
+  },
+  {
+    label: "Total Sales",
+    count: "$89,000",
+    sensex: false,
+    profit: "4.3%",
+    description: "Down from yesterday",
+    icon: Sales,
+  },
+  {
+    label: "Total Pending",
+    count: "2040",
+    sensex: true,
+    profit: "1.8%",
+    description: "Up from yesterday",
+    icon: Pending,
+  },
+];
+
+export const ProductList: ProductListBO[] = [
+  {
+    id: "7b9e0fa4-1c4f-4bcf-a8b2-9473a0f61f7c",
+    productName: "Apple Watch",
+    location: "6096 Marjolaine Landing",
+    dateTime: "12.09.2019 - 12:53 PM",
+    piece: 423,
+    amount: "$34,295",
+    status: "Delivered",
+  },
+  {
+    id: "751ae97d7-2a44-4676-bb9a-5e57d7dbbd6d",
+    productName: "Samsung Galaxy Watch",
+    location: "1234 Elm Street",
+    dateTime: "01.10.2020 - 10:15 AM",
+    piece: 150,
+    amount: "$29,999",
+    status: "In Transit",
+  },
+  {
+    id: "bf88288d-0b54-4205-b5b7-0b6c4f20b9fc",
+    productName: "Fitbit Charge 4",
+    location: "7890 Maple Avenue",
+    dateTime: "03.15.2021 - 08:45 AM",
+    piece: 300,
+    amount: "$19,995",
+    status: "Delivered",
+  },
+  {
+    id: "d0530f17-7dbf-48b6-bd0f-5c1770ad15c9",
+    productName: "Garmin Forerunner 945",
+    location: "4567 Oak Lane",
+    dateTime: "05.22.2021 - 02:30 PM",
+    piece: 200,
+    amount: "$49,999",
+    status: "Pending",
+  },
+  {
+    id: "d84c8f49-47b1-4b71-b0ec-5d8992c7b5f8",
+    productName: "Huawei Watch GT 2",
+    location: "3456 Pine Street",
+    dateTime: "07.30.2021 - 05:15 PM",
+    piece: 180,
+    amount: "$21,495",
+    status: "Delivered",
+  },
+  {
+    id: "a212d1e3-5a41-4a02-b5b0-19e845d1af41",
+    productName: "Amazfit Bip U Pro",
+    location: "1234 Birch Road",
+    dateTime: "09.12.2021 - 11:00 AM",
+    piece: 220,
+    amount: "$11,995",
+    status: "In Transit",
   },
 ];
