@@ -14,7 +14,18 @@ import { ReactComponent as Todo } from "../Assets/Images/Todo.svg";
 import { ReactComponent as Team } from "../Assets/Images/team.svg";
 import { ReactComponent as Calendar } from "../Assets/Images/calendar.svg";
 import { ReactComponent as Pricing } from "../Assets/Images/pricing.svg";
+import { ReactComponent as Bin } from "../Assets/Images/Messages/bin.svg";
+import { ReactComponent as Important } from "../Assets/Images/Messages/Important.svg";
+import { ReactComponent as Spam } from "../Assets/Images/Messages/Spam.svg";
+import { ReactComponent as Draft } from "../Assets/Images/Messages/pencil.svg";
+import { ReactComponent as Sent } from "../Assets/Images/Messages/send.svg";
+import { ReactComponent as Starred } from "../Assets/Images/Messages/rating-star.svg";
+import { ReactComponent as MailInbox } from "../Assets/Images/Messages/email-action-unread-non-active.svg";
+import { ReactComponent as MailInboxActive } from "../Assets/Images/Messages/email-action-unread.svg";
 import { CaroselItemBO } from "../BOs/CaroselItemBO";
+import { EmailOptionBO } from "../BOs/EmailOptionBO";
+
+export const PER_PAGE = 12;
 
 export const MenuItems: MenuItemBO[] = [
   {
@@ -113,5 +124,43 @@ export const CaroselData: CaroselItemBO[] = [
     date: "November 12-22",
     label: "Designer Dresses - Pick from trendy Designer Dress.",
     description: "Enjoy free home delivery in this Christmas",
+  },
+];
+
+export const EmailOptions: EmailOptionBO[] = [
+  {
+    name: "Inbox",
+    icon: MailInbox,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Starred",
+    icon: Starred,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Sent",
+    icon: Sent,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Darft",
+    icon: Draft,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Spam",
+    icon: Spam,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Important",
+    icon: Important,
+    activeIcon: MailInboxActive,
+  },
+  {
+    name: "Bin",
+    icon: Bin,
+    activeIcon: MailInboxActive,
   },
 ];
